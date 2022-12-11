@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "n423-k": {
+      "hosting": {
+        "app": [
+          "n423-k"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "n423-k"
+  }
+}

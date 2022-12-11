@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngIf="currentUser.id != null">
+    <ion-item>
+      <ion-label position="stacked">First name</ion-label>
+      <ion-input
+        [(ngModel)]="fName"
+        placeholder="{{currentUser.firstName}}"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Last name</ion-label>
+      <ion-input
+        [(ngModel)]="lName"
+        placeholder="{{currentUser.lastName}}"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Grade</ion-label>
+      <ion-input
+        [(ngModel)]="grade"
+        placeholder="{{currentUser.grade}}"
+      ></ion-input>
+    </ion-item>
+    <div class="list">
+      <ion-button expand="full" color="danger" (click)="cancelEdit()"
+        >Cancel</ion-button
+      >
+      <ion-button
+        expand="full"
+        color="success"
+        (click)="update(fName, lName, grade)"
+        >Update</ion-button
+      >
+    </div>
+  </ion-list>
+</ion-content>
